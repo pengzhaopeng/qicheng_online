@@ -9,49 +9,38 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>qc_common</artifactId>
+    <artifactId>realtime</artifactId>
 
     <dependencies>
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpmime</artifactId>
-        </dependency>
-
-        <!--时间处理-->
-        <dependency>
-            <groupId>com.github.nscala-time</groupId>
-            <artifactId>nscala-time_2.10</artifactId>
-            <version>2.0.0</version>
+            <groupId>com.pengzhaopeng</groupId>
+            <artifactId>qc_common</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <dependency>
             <groupId>org.apache.spark</groupId>
-            <artifactId>spark-hive_2.11</artifactId>
-            <version>${spark.version}</version>
-            <scope>provided</scope>
+            <artifactId>spark-core_2.11</artifactId>
         </dependency>
-
-        <!--jedis-->
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>2.9.0</version>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>0.10.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka-0-10_2.11</artifactId>
+            <version>${spark.version}</version>
+            <!--<scope>provided</scope>-->
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-
             <!-- 这是个编译java代码的 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

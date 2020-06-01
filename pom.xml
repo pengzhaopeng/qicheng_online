@@ -12,6 +12,7 @@
         <module>qc_common</module>
         <module>qc_mock</module>
         <module>qc_logger</module>
+        <module>realtime</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
