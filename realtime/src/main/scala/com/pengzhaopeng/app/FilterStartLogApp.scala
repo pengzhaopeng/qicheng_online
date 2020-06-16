@@ -4,7 +4,7 @@ import java.lang
 import java.sql.{Connection, ResultSet}
 
 import com.pengzhaopeng.constans.GmallConstant
-import com.pengzhaopeng.utils.{DataSourceUtil, SqlProxy, _}
+import com.pengzhaopeng.utils.PropertiesUtil
 import com.pengzhaopeng.utils.jdbc_mysql.{DataSourceUtil, QueryCallback, SqlProxy}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.TopicPartition
@@ -99,6 +99,7 @@ object FilterStartLogApp {
     }
 
     //业务处理
+    //
 
     //处理完业务逻辑后手动提交 offset 维护到本地 mysql 中
     stream.foreachRDD(rdd => {
